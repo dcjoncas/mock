@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>DevReady • Screen 7 — Tracking & Exports</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="DevReady" style="width:42px;height:42px"/>
+        <div class="title">
+          <span>DEV</span>
+          <span>READY</span>
+          <span class="sub">Vetting • UX mock</span>
+        </div>
+      </div>
+
+      <div class="userbox">
+        <div style="font-size:12px;opacity:.9">Welcome back,</div>
+        <div class="name">Darrin Joncas</div>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <span class="badge">Technology domain</span>
+          <span class="badge">UI/UX only</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="find-candidate.html" class=""><span class="dot"></span>Vetting</a><a href="profile-preview.html" class=""><span class="dot"></span>Profiles</a><a href="match-role.html" class=""><span class="dot"></span>Job Descriptions</a><a href="status-tracker.html" class="active"><span class="dot"></span>Results</a>
+        <div class="hint">
+          Mock navigation for the end-to-end flow. No backend calls — all buttons are visual placeholders.
+        </div>
+      </nav>
+
+      <div class="footer">
+        DevReady • www.devready.io<br/>
+        Green theme + clean cards (no icons)
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <div class="page-title">Screen 7 — Tracking & Exports</div>
+          <div class="breadcrumb">Vetting Process • Reporting</div>
+        </div>
+        <div class="search">
+          <input class="input" placeholder="Search for profiles (name / email)"/>
+          <button class="btn secondary" type="button" onclick="alert('Mock only')">Search</button>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:18px">
+        <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
+          <div>
+            <div style="font-weight:900;margin-bottom:6px">Process Flow</div>
+            <div style="color:var(--muted);font-size:13px">Click through the 7 screens in order. Each page stands alone but is linked for UX review.</div>
+          </div>
+          <div class="flow"><a class="step " href="find-candidate.html">1 · Find candidate</a><a class="step " href="match-role.html">2 · Match to role</a><a class="step " href="candidate-chat.html">3 · Candidate chat</a><a class="step " href="profile-preview.html">4 · Profile build</a><a class="step " href="client-comm.html">5 · Client comms</a><a class="step " href="schedule-interview.html">6 · Schedule interview</a><a class="step on" href="status-tracker.html">7 · Track & export</a></div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <section class="card">
+          
+<h2>Pipeline tracking, exports & audit</h2>
+<p>Track every candidate through the pipeline, keep an audit trail, and export client-ready artifacts (HTML/DOCX/PDF).</p>
+
+<div class="kpi">
+  <div class="k"><div class="v">10</div><div class="l">Shortlisted</div></div>
+  <div class="k"><div class="v">3</div><div class="l">Client approved</div></div>
+  <div class="k"><div class="v">1</div><div class="l">Interviews scheduled</div></div>
+</div>
+
+<h2 style="margin-top:18px">Candidate pipeline</h2>
+<table class="table">
+  <thead><tr><th>Candidate</th><th>Stage</th><th>Owner</th><th>Next action</th><th>Due</th><th></th></tr></thead>
+  <tbody>
+    <tr><td><strong>Giovanni S</strong></td><td><span class="pill">Scheduled</span></td><td>DJ</td><td>Send calendar invite + plan</td><td>Tomorrow</td><td><button class="btn secondary" style="padding:8px 12px" onclick="alert('Mock: open')">Open</button></td></tr>
+    <tr><td><strong>Maria T</strong></td><td><span class="pill">Approved</span></td><td>DJ</td><td>Collect availability</td><td>2 days</td><td><button class="btn secondary" style="padding:8px 12px" onclick="alert('Mock: open')">Open</button></td></tr>
+    <tr><td><strong>Kevin P</strong></td><td><span class="pill">Backup</span></td><td>DJ</td><td>Keep warm (light touch)</td><td>1 week</td><td><button class="btn secondary" style="padding:8px 12px" onclick="alert('Mock: open')">Open</button></td></tr>
+  </tbody>
+</table>
+
+<div class="row-actions">
+  <button class="btn" type="button" onclick="alert('Mock: export client pack')">Export Client Pack</button>
+  <button class="btn secondary" type="button" onclick="alert('Mock: export all profiles')">Export All Profiles</button>
+  <button class="btn secondary" type="button" onclick="alert('Mock: export audit log')">Export Audit Log</button>
+</div>
+
+<h2 style="margin-top:18px">Audit log (mock)</h2>
+<table class="table">
+  <thead><tr><th>Time</th><th>Event</th><th>Actor</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>10:12</td><td>JD normalized</td><td>System</td><td>Senior Full-Stack Engineer (v2)</td></tr>
+    <tr><td>10:18</td><td>Ranked Top 10</td><td>System</td><td>Similarity model v3</td></tr>
+    <tr><td>10:29</td><td>AI chat started</td><td>Candidate</td><td>Backend track</td></tr>
+    <tr><td>11:04</td><td>Public profile generated</td><td>System</td><td>Client-safe summary</td></tr>
+    <tr><td>11:20</td><td>Shortlist sent</td><td>DJ</td><td>Email draft + attachments</td></tr>
+    <tr><td>12:02</td><td>Interview slot proposed</td><td>System</td><td>3 options</td></tr>
+  </tbody>
+</table>
+
+<div class="notice" style="margin-top:12px">
+  End of mock flow. Use this screen as the “single pane” for ops + reporting.
+</div>
+
+        </section>
+        <aside class="card">
+          
+      <h2>What happens on this screen</h2>
+      <p>UX-only guidance for this screen.</p>
+      <ul style="margin:0 0 14px 18px;color:var(--muted);line-height:1.4"><li>Single view of pipeline status + ownership.</li><li>Exports: profiles, client packs, audit trail.</li><li>Outcome: close the loop from sourcing → interview → hire.</li></ul>
+      <div class="row-actions"><a class="btn " href="find-candidate.html" style="text-decoration:none;display:inline-block">Restart: Find candidate →</a><a class="btn secondary" href="schedule-interview.html" style="text-decoration:none;display:inline-block">Back: Scheduling</a></div>
+      <div class="notice" style="margin-top:14px">All actions here are mocked. The goal is to validate layout, flow, and labels.</div>
+    
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // tiny UX sugar (mock only)
+    document.querySelectorAll('a.step').forEach(a=>a.addEventListener('click', ()=>{}));
+  </script>
+</body>
+</html>

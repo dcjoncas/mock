@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>DevReady • Screen 1 — Find Candidate</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="DevReady" style="width:42px;height:42px"/>
+        <div class="title">
+          <span>DEV</span>
+          <span>READY</span>
+          <span class="sub">Vetting • UX mock</span>
+        </div>
+      </div>
+
+      <div class="userbox">
+        <div style="font-size:12px;opacity:.9">Welcome back,</div>
+        <div class="name">Darrin Joncas</div>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <span class="badge">Technology domain</span>
+          <span class="badge">UI/UX only</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="find-candidate.html" class="active"><span class="dot"></span>Vetting</a><a href="profile-preview.html" class=""><span class="dot"></span>Profiles</a><a href="match-role.html" class=""><span class="dot"></span>Job Descriptions</a><a href="status-tracker.html" class=""><span class="dot"></span>Results</a>
+        <div class="hint">
+          Mock navigation for the end-to-end flow. No backend calls — all buttons are visual placeholders.
+        </div>
+      </nav>
+
+      <div class="footer">
+        DevReady • www.devready.io<br/>
+        Green theme + clean cards (no icons)
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <div class="page-title">Screen 1 — Find Candidate</div>
+          <div class="breadcrumb">Vetting Process • Intake</div>
+        </div>
+        <div class="search">
+          <input class="input" placeholder="Search for profiles (name / email)"/>
+          <button class="btn secondary" type="button" onclick="alert('Mock only')">Search</button>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:18px">
+        <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
+          <div>
+            <div style="font-weight:900;margin-bottom:6px">Process Flow</div>
+            <div style="color:var(--muted);font-size:13px">Click through the 7 screens in order. Each page stands alone but is linked for UX review.</div>
+          </div>
+          <div class="flow"><a class="step on" href="find-candidate.html">1 · Find candidate</a><a class="step " href="match-role.html">2 · Match to role</a><a class="step " href="candidate-chat.html">3 · Candidate chat</a><a class="step " href="profile-preview.html">4 · Profile build</a><a class="step " href="client-comm.html">5 · Client comms</a><a class="step " href="schedule-interview.html">6 · Schedule interview</a><a class="step " href="status-tracker.html">7 · Track & export</a></div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <section class="card">
+          
+<h2>Find a candidate (system or internet)</h2>
+<p>Search existing DevReady profiles, or pull a new profile from an external source (e.g., People Data / LinkedIn URL) and queue it for normalization.</p>
+
+<div class="split">
+  <div class="field">
+    <label>Search existing profiles</label>
+    <input placeholder="Name, email, keyword (e.g., 'VR', 'C#', 'React')"/>
+    <div class="row-actions">
+      <button class="btn" type="button" onclick="alert('Mock: search')">Search Profiles</button>
+      <button class="btn secondary" type="button" onclick="alert('Mock: open advanced filters')">Advanced Filters</button>
+    </div>
+    <div class="kpi" style="margin-top:12px">
+      <div class="k"><div class="v">1,482</div><div class="l">Profiles in system</div></div>
+      <div class="k"><div class="v">73</div><div class="l">New this week</div></div>
+      <div class="k"><div class="v">9</div><div class="l">In interview pipeline</div></div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Import from internet</label>
+    <input placeholder="LinkedIn URL or PeopleData ID"/>
+    <div class="split" style="margin-top:10px">
+      <div class="field">
+        <label>Source</label>
+        <select>
+          <option>People Data (API)</option>
+          <option>Dux-Soup (LinkedIn URL → PDF)</option>
+          <option>Manual upload (PDF / DOCX)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Consent captured</label>
+        <select>
+          <option>Yes (candidate opted-in)</option>
+          <option>No (do not contact)</option>
+        </select>
+      </div>
+    </div>
+    <div class="row-actions">
+      <button class="btn" type="button" onclick="alert('Mock: queue import')">Queue Profile</button>
+      <button class="btn secondary" type="button" onclick="alert('Mock: open consent policy')">Consent policy</button>
+    </div>
+    <div style="margin-top:12px" class="notice">
+      Next: the system normalizes the candidate into a DevReady profile and sends you to “Match to role”.
+    </div>
+  </div>
+</div>
+
+<h2 style="margin-top:18px">Search results</h2>
+<table class="table">
+  <thead><tr><th>#</th><th>Candidate</th><th>Email</th><th>Primary stack</th><th>Status</th><th></th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><strong>Giovanni S</strong></td><td>giovanni@email.com</td><td>Python • C# • React</td><td><span class="pill">Ready</span></td><td><a class="btn secondary" href="match-role.html" style="padding:8px 12px">Select</a></td></tr>
+    <tr><td>2</td><td><strong>John N Farmer</strong></td><td>john.farmer@email.com</td><td>VR • Unity • C#</td><td><span class="pill">Vetted</span></td><td><a class="btn secondary" href="match-role.html" style="padding:8px 12px">Select</a></td></tr>
+    <tr><td>3</td><td><strong>Maria T</strong></td><td>maria@email.com</td><td>Node • Angular • SQL</td><td><span class="pill">New</span></td><td><a class="btn secondary" href="match-role.html" style="padding:8px 12px">Select</a></td></tr>
+  </tbody>
+</table>
+
+        </section>
+        <aside class="card">
+          
+      <h2>What happens on this screen</h2>
+      <p>UX-only guidance for this screen.</p>
+      <ul style="margin:0 0 14px 18px;color:var(--muted);line-height:1.4"><li>Primary action: find or import a candidate.</li><li>Secondary action: confirm consent + source.</li><li>Outcome: a candidate is selected and the flow moves to matching.</li></ul>
+      <div class="row-actions"><a class="btn " href="match-role.html" style="text-decoration:none;display:inline-block">Next: Match to role →</a><a class="btn secondary" href="profile-preview.html" style="text-decoration:none;display:inline-block">View profile builder</a></div>
+      <div class="notice" style="margin-top:14px">All actions here are mocked. The goal is to validate layout, flow, and labels.</div>
+    
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // tiny UX sugar (mock only)
+    document.querySelectorAll('a.step').forEach(a=>a.addEventListener('click', ()=>{}));
+  </script>
+</body>
+</html>

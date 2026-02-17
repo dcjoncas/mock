@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>DevReady • Screen 4 — Profile Preview</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="DevReady" style="width:42px;height:42px"/>
+        <div class="title">
+          <span>DEV</span>
+          <span>READY</span>
+          <span class="sub">Vetting • UX mock</span>
+        </div>
+      </div>
+
+      <div class="userbox">
+        <div style="font-size:12px;opacity:.9">Welcome back,</div>
+        <div class="name">Darrin Joncas</div>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <span class="badge">Technology domain</span>
+          <span class="badge">UI/UX only</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="find-candidate.html" class=""><span class="dot"></span>Vetting</a><a href="profile-preview.html" class="active"><span class="dot"></span>Profiles</a><a href="match-role.html" class=""><span class="dot"></span>Job Descriptions</a><a href="status-tracker.html" class=""><span class="dot"></span>Results</a>
+        <div class="hint">
+          Mock navigation for the end-to-end flow. No backend calls — all buttons are visual placeholders.
+        </div>
+      </nav>
+
+      <div class="footer">
+        DevReady • www.devready.io<br/>
+        Green theme + clean cards (no icons)
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <div class="page-title">Screen 4 — Profile Preview</div>
+          <div class="breadcrumb">Vetting Process • Profile Output</div>
+        </div>
+        <div class="search">
+          <input class="input" placeholder="Search for profiles (name / email)"/>
+          <button class="btn secondary" type="button" onclick="alert('Mock only')">Search</button>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:18px">
+        <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
+          <div>
+            <div style="font-weight:900;margin-bottom:6px">Process Flow</div>
+            <div style="color:var(--muted);font-size:13px">Click through the 7 screens in order. Each page stands alone but is linked for UX review.</div>
+          </div>
+          <div class="flow"><a class="step " href="find-candidate.html">1 · Find candidate</a><a class="step " href="match-role.html">2 · Match to role</a><a class="step " href="candidate-chat.html">3 · Candidate chat</a><a class="step on" href="profile-preview.html">4 · Profile build</a><a class="step " href="client-comm.html">5 · Client comms</a><a class="step " href="schedule-interview.html">6 · Schedule interview</a><a class="step " href="status-tracker.html">7 · Track & export</a></div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <section class="card">
+          
+<div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+  <div style="width:68px;height:68px;border-radius:20px;background:linear-gradient(135deg, rgba(127,191,63,.35), rgba(47,125,75,.25));border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:900">
+    GS
+  </div>
+  <div style="flex:1;min-width:260px">
+    <div style="font-size:22px;font-weight:900;line-height:1">Giovanni S</div>
+    <div style="color:var(--muted);margin-top:6px">São Paulo, Brazil • Senior Software Engineer • Available in 10 days</div>
+    <div class="pills">
+      <span class="pill">Backend</span><span class="pill">Database</span><span class="pill">Identity</span><span class="pill">React</span>
+    </div>
+  </div>
+  <div class="row-actions" style="margin:0">
+    <button class="btn" type="button" onclick="alert('Mock: download public profile')">Download Public (PDF)</button>
+    <button class="btn secondary" type="button" onclick="alert('Mock: download private profile')">Download Private (PDF)</button>
+  </div>
+</div>
+
+<div class="split" style="margin-top:16px">
+  <div class="card" style="padding:14px;border-radius:18px;box-shadow:none">
+    <h2 style="margin:0 0 8px 0">Skills snapshot</h2>
+    <p style="margin:0 0 10px 0">Clean, client-friendly view of primary skills and levels.</p>
+    <table class="table" style="margin-top:0">
+      <thead><tr><th>Skill</th><th>Level</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Python</strong></td><td>Advanced</td><td>Identity workflows • APIs</td></tr>
+        <tr><td><strong>C# / .NET</strong></td><td>Advanced</td><td>Core services • integrations</td></tr>
+        <tr><td><strong>React</strong></td><td>Proficient</td><td>Admin console • dashboards</td></tr>
+        <tr><td><strong>SQL</strong></td><td>Proficient</td><td>Modeling • tuning</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="padding:14px;border-radius:18px;box-shadow:none">
+    <h2 style="margin:0 0 8px 0">Feature experience</h2>
+    <p style="margin:0 0 10px 0">Tagged experiences that map to your product needs.</p>
+    <div class="pills">
+      <span class="pill">Authentication</span>
+      <span class="pill">Fraud detection</span>
+      <span class="pill">API platforms</span>
+      <span class="pill">Role-based access</span>
+      <span class="pill">Observability</span>
+    </div>
+    <div style="margin-top:14px">
+      <div style="display:flex;justify-content:space-between"><small>Moderate</small><small>Expert</small></div>
+      <div class="progress" style="margin-top:6px"><div style="width:78%"></div></div>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin-top:18px">Portfolio (client-safe excerpts)</h2>
+<table class="table">
+  <thead><tr><th>Company</th><th>Role</th><th>Highlights</th><th>Skills</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Interactive</strong><br/><small>2019–Present</small></td>
+      <td>Senior Developer</td>
+      <td>Built APIs + admin UI to identify and replace problematic KYC flows; improved fraud detection and processing time.</td>
+      <td><span class="pill">Python</span> <span class="pill">APIs</span> <span class="pill">React</span></td>
+    </tr>
+    <tr>
+      <td><strong>IBM</strong><br/><small>2016–2019</small></td>
+      <td>Senior Architect</td>
+      <td>Designed a verification component used by banks; document scanning + identity match pipelines.</td>
+      <td><span class="pill">C#</span> <span class="pill">SQL</span> <span class="pill">Auth</span></td>
+    </tr>
+    <tr>
+      <td><strong>Socopa Invest</strong><br/><small>2015–2016</small></td>
+      <td>Senior Developer</td>
+      <td>Implemented monitoring and automation; improved latency and reliability for trading back office.</td>
+      <td><span class="pill">Observability</span> <span class="pill">SQL</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="notice" style="margin-top:12px">
+  Next: send the shortlist and narrative to the end client, then schedule interviews.
+</div>
+
+        </section>
+        <aside class="card">
+          
+      <h2>What happens on this screen</h2>
+      <p>UX-only guidance for this screen.</p>
+      <ul style="margin:0 0 14px 18px;color:var(--muted);line-height:1.4"><li>Public profile: client-safe summary, skills, portfolio excerpts.</li><li>Private profile: deeper notes, ratings, transcripts, risks.</li><li>Outcome: shortlist candidate(s) for client review.</li></ul>
+      <div class="row-actions"><a class="btn " href="client-comm.html" style="text-decoration:none;display:inline-block">Next: Client comms →</a><a class="btn secondary" href="candidate-chat.html" style="text-decoration:none;display:inline-block">Back: Candidate chat</a></div>
+      <div class="notice" style="margin-top:14px">All actions here are mocked. The goal is to validate layout, flow, and labels.</div>
+    
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // tiny UX sugar (mock only)
+    document.querySelectorAll('a.step').forEach(a=>a.addEventListener('click', ()=>{}));
+  </script>
+</body>
+</html>
