@@ -1,0 +1,18 @@
+cd C:\mock
+
+@"
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local secrets / tokens
+google_token.json
+google_client_secret.json
+*.env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+"@ | Out-File -Encoding utf8 .gitignore

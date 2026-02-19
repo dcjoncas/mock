@@ -1,16 +1,28 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DevReady • Screen 6 — Interview Scheduling</title>
-  <link rel="stylesheet" href="assets/styles.css"/>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </style>
 </head>
+
 <body>
   <div class="container">
     <aside class="sidebar">
       <div class="brand">
-        <img src="assets/logo.svg" alt="DevReady" style="width:42px;height:42px"/>
+        <img src="assets/logo.svg" alt="DevReady" style="width:42px;height:42px" />
         <div class="title">
           <span>DEV</span>
           <span>READY</span>
@@ -23,19 +35,24 @@
         <div class="name">Darrin Joncas</div>
         <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
           <span class="badge">Technology domain</span>
-          <span class="badge">UI/UX only</span>
+          <span class="badge">UI/UX + MVP backend</span>
         </div>
       </div>
 
       <nav class="nav">
-        <a href="find-candidate.html" class=""><span class="dot"></span>Vetting</a><a href="profile-preview.html" class=""><span class="dot"></span>Profiles</a><a href="match-role.html" class=""><span class="dot"></span>Job Descriptions</a><a href="status-tracker.html" class=""><span class="dot"></span>Results</a>
+        <a href="find-candidate.html"><span class="dot"></span>Vetting</a>
+        <a href="profile-preview.html"><span class="dot"></span>Profiles</a>
+        <a href="match-role.html"><span class="dot"></span>Job Descriptions</a>
+        <a href="status-tracker.html"><span class="dot"></span>Results</a>
+
         <div class="hint">
-          Mock navigation for the end-to-end flow. No backend calls — all buttons are visual placeholders.
+          This screen is wired to a local FastAPI backend for an MVP calendar invite.
+          If the backend is down, buttons will show an error.
         </div>
       </nav>
 
       <div class="footer">
-        DevReady • www.devready.io<br/>
+        DevReady • www.devready.io<br />
         Green theme + clean cards (no icons)
       </div>
     </aside>
@@ -47,7 +64,7 @@
           <div class="breadcrumb">Vetting Process • Scheduling</div>
         </div>
         <div class="search">
-          <input class="input" placeholder="Search for profiles (name / email)"/>
+          <input class="input" placeholder="Search for profiles (name / email)" />
           <button class="btn secondary" type="button" onclick="alert('Mock only')">Search</button>
         </div>
       </div>
@@ -56,99 +73,393 @@
         <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
           <div>
             <div style="font-weight:900;margin-bottom:6px">Process Flow</div>
-            <div style="color:var(--muted);font-size:13px">Click through the 7 screens in order. Each page stands alone but is linked for UX review.</div>
+            <div style="color:var(--muted);font-size:13px">Click through the 7 screens in order. Each page stands alone
+              but is linked for UX review.</div>
           </div>
-          <div class="flow"><a class="step " href="find-candidate.html">1 · Find candidate</a><a class="step " href="match-role.html">2 · Match to role</a><a class="step " href="candidate-chat.html">3 · Candidate chat</a><a class="step " href="profile-preview.html">4 · Profile build</a><a class="step " href="client-comm.html">5 · Client comms</a><a class="step on" href="schedule-interview.html">6 · Schedule interview</a><a class="step " href="status-tracker.html">7 · Track & export</a></div>
+          <div class="flow">
+            <a class="step" href="find-candidate.html">1 · Find candidate</a>
+            <a class="step" href="match-role.html">2 · Match to role</a>
+            <a class="step" href="candidate-chat.html">3 · Candidate chat</a>
+            <a class="step" href="profile-preview.html">4 · Profile build</a>
+            <a class="step" href="client-comm.html">5 · Client comms</a>
+            <a class="step on" href="schedule-interview.html">6 · Schedule interview</a>
+            <a class="step" href="status-tracker.html">7 · Track & export</a>
+          </div>
         </div>
       </div>
 
       <div class="grid">
         <section class="card">
-          
-<h2>Schedule interviews with AI assistance</h2>
-<p>Coordinate candidate + client availability, propose time slots, and generate an interview plan (questions, focus areas, rubric).</p>
+          <h2>Schedule interviews with AI assistance</h2>
+          <p style="color:var(--muted);margin-top:-6px">
+            Generate an interview plan and a complete calendar invite (Google Meet link included) using the AI context
+            from earlier screens.
+          </p>
 
-<div class="split">
-  <div>
-    <h2 style="margin-top:0">Availability</h2>
-    <div class="split">
-      <div class="card" style="padding:14px;border-radius:18px;box-shadow:none">
-        <div style="font-weight:900;margin-bottom:6px">Candidate</div>
-        <p style="margin:0 0 10px 0">Giovanni S • Timezone: BRT</p>
-        <table class="table" style="margin-top:0">
-          <thead><tr><th>Day</th><th>Windows</th></tr></thead>
-          <tbody>
-            <tr><td>Tue</td><td>10:00–12:00 • 15:00–17:00</td></tr>
-            <tr><td>Wed</td><td>09:00–11:00 • 14:00–18:00</td></tr>
-            <tr><td>Thu</td><td>11:00–13:00</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="card" style="padding:14px;border-radius:18px;box-shadow:none">
-        <div style="font-weight:900;margin-bottom:6px">Client</div>
-        <p style="margin:0 0 10px 0">[Client Team] • Timezone: MST</p>
-        <table class="table" style="margin-top:0">
-          <thead><tr><th>Day</th><th>Windows</th></tr></thead>
-          <tbody>
-            <tr><td>Tue</td><td>12:00–16:00</td></tr>
-            <tr><td>Wed</td><td>13:00–17:00</td></tr>
-            <tr><td>Fri</td><td>10:00–12:00</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+          <div class="row-actions" style="margin-top:10px">
+            <button class="btn secondary" type="button" onclick="connectGoogle()">
+              Connect Google Calendar
+            </button>
+            <button class="btn secondary" type="button" onclick="checkHealth()">
+              Check backend
+            </button>
+            <span id="healthBadge" class="badge" style="display:none"></span>
+          </div>
 
-    <div class="row-actions" style="margin-top:12px">
-      <button class="btn" type="button" onclick="alert('Mock: AI proposes slots')">AI Propose Slots</button>
-      <button class="btn secondary" type="button" onclick="alert('Mock: send calendar holds')">Send calendar holds</button>
-    </div>
+          <h3 style="margin-top:18px">Inputs</h3>
 
-    <div class="notice" style="margin-top:12px">
-      Suggested slots (mock): Wed 3:00pm MST • Thu 11:00am MST • Fri 10:30am MST
-    </div>
-  </div>
+          <div class="split">
+            <div>
+              <label class="label">Candidate name</label>
+              <input id="candidateName" class="input" placeholder="e.g., Giovanni S" value="MAck" />
 
-  <div>
-    <h2 style="margin-top:0">Interview plan (auto-generated)</h2>
-    <p>AI produces a role-specific plan with focus areas and scoring rubric.</p>
+              <label class="label" style="margin-top:10px">Interviewers (add one or more)</label>
 
-    <div class="card" style="padding:14px;border-radius:18px;box-shadow:none">
-      <div style="font-weight:900">60-minute plan</div>
-      <table class="table" style="margin-top:10px">
-        <thead><tr><th>Time</th><th>Focus</th><th>Signals</th></tr></thead>
-        <tbody>
-          <tr><td>0–10</td><td>Intro + project overview</td><td>Clarity, ownership</td></tr>
-          <tr><td>10–30</td><td>API design deep-dive</td><td>Auth, versioning, trade-offs</td></tr>
-          <tr><td>30–45</td><td>System design scenario</td><td>Scaling, data, observability</td></tr>
-          <tr><td>45–55</td><td>Collaboration & leadership</td><td>Stakeholders, conflict</td></tr>
-          <tr><td>55–60</td><td>Candidate questions</td><td>Fit, curiosity</td></tr>
-        </tbody>
-      </table>
-      <div class="row-actions">
-        <button class="btn secondary" type="button" onclick="alert('Mock: download plan')">Download plan</button>
-        <a class="btn" href="status-tracker.html" style="text-decoration:none;display:inline-block">Confirm &amp; move to tracking</a>
-      </div>
-    </div>
-  </div>
-</div>
+              <div id="interviewers"></div>
+
+              <div class="row-actions" style="margin-top:10px">
+                <button class="btn secondary" type="button" onclick="addInterviewer()">Add interviewer</button>
+              </div>
+
+              <div class="hint" style="margin-top:6px">
+                Tip: add client interviewers too if you want them on the invite.
+              </div>
+
+              <label class="label" style="margin-top:12px">Role / Title</label>
+              <input id="role" class="input" placeholder="e.g., Senior Full Stack Engineer" value="SUPER MACK" />
+
+              <label class="label" style="margin-top:12px">Job description (paste)</label>
+              <textarea id="jobDescription" class="input" rows="6"
+                placeholder="Paste JD here...">BUild code to control the universe</textarea>
+
+              <div class="split" style="margin-top:12px">
+                <div>
+                  <label class="label">Duration</label>
+                  <select id="duration" class="input">
+                    <option value="30">30 minutes</option>
+                    <option value="45">45 minutes</option>
+                    <option value="60" selected>60 minutes</option>
+                    <option value="90">90 minutes</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="label">Timezone for event</label>
+                  <select id="timezone" class="input">
+                    <option value="America/Denver" selected>America/Denver (MST/MDT)</option>
+                    <option value="America/New_York">America/New_York (ET)</option>
+                    <option value="America/Los_Angeles">America/Los_Angeles (PT)</option>
+                    <option value="UTC">UTC</option>
+                  </select>
+                </div>
+              </div>
+
+              <label class="label" style="margin-top:12px">Talking points (one per line)</label>
+              <textarea id="talkingPoints" class="input" rows="5"
+                placeholder="One per line...">Deep dive into the world of lobster fishing</textarea>
+
+              <label class="label" style="margin-top:12px">AI context (paste from Candidate Chat / earlier
+                screen)</label>
+              <textarea id="aiContext" class="input" rows="4" placeholder="Paste context here if desired..."></textarea>
+            </div>
+
+            <div>
+              <h3 style="margin-top:0">Time window for scheduling</h3>
+              <p style="color:var(--muted);margin-top:-6px">
+                We’ll find the first free slot within this window on your connected calendar.
+              </p>
+
+              <label class="label">Window start (local)</label>
+              <input id="windowStart" class="input" type="datetime-local" />
+
+              <label class="label" style="margin-top:10px">Window end (local)</label>
+              <input id="windowEnd" class="input" type="datetime-local" />
+
+              <div class="notice" style="margin-top:12px">
+                Reminder: before creating invites, connect Google Calendar at:
+                <span class="mono">http://127.0.0.1:8000/auth/google</span>
+              </div>
+
+              <div class="row-actions" style="margin-top:12px">
+                <button class="btn" type="button" onclick="generateDraft()">Generate AI Draft (JSON)</button>
+                <button class="btn" type="button" onclick="createInvite()">Create Google Calendar Invite</button>
+              </div>
+
+              <div class="notice" id="statusNote" style="margin-top:12px;display:none"></div>
+            </div>
+          </div>
+
+          <hr style="margin:18px 0;border:none;border-top:1px solid rgba(0,0,0,.08)" />
+
+          <h3>Outputs</h3>
+          <p style="color:var(--muted);margin-top:-6px">Draft JSON and calendar event response.</p>
+
+          <div class="split">
+            <div class="card" style="padding:14px;border-radius:18px;box-shadow:none">
+              <div style="font-weight:900;margin-bottom:8px">AI Draft (JSON)</div>
+              <pre id="draftJson" class="mono"
+                style="margin:0;min-height:180px;background:#f5f7f6;padding:12px;border-radius:12px;border:1px solid rgba(0,0,0,.08)">—</pre>
+            </div>
+
+            <div class="card" style="padding:14px;border-radius:18px;box-shadow:none">
+              <div style="font-weight:900;margin-bottom:8px">Create Invite Result</div>
+              <pre id="result" class="mono"
+                style="margin:0;min-height:180px;background:#f5f7f6;padding:12px;border-radius:12px;border:1px solid rgba(0,0,0,.08)">—</pre>
+
+              <div class="row-actions" style="margin-top:12px">
+                <a id="openEventBtn" class="btn secondary" href="#" target="_blank" rel="noreferrer"
+                  style="display:none;text-decoration:none">
+                  Open event in Google Calendar
+                </a>
+                <a id="openMeetBtn" class="btn secondary" href="#" target="_blank" rel="noreferrer"
+                  style="display:none;text-decoration:none">
+                  Open Google Meet link
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row-actions" style="margin-top:14px">
+            <a class="btn" href="status-tracker.html" style="text-decoration:none;display:inline-block">Confirm &amp;
+              move to tracking</a>
+            <a class="btn secondary" href="client-comm.html" style="text-decoration:none;display:inline-block">Back:
+              Client comms</a>
+          </div>
 
         </section>
+
         <aside class="card">
-          
-      <h2>What happens on this screen</h2>
-      <p>UX-only guidance for this screen.</p>
-      <ul style="margin:0 0 14px 18px;color:var(--muted);line-height:1.4"><li>Collect availability (candidate + client).</li><li>AI proposes slots and builds an interview plan + rubric.</li><li>Outcome: scheduled interview(s) and pipeline tracking.</li></ul>
-      <div class="row-actions"><a class="btn " href="status-tracker.html" style="text-decoration:none;display:inline-block">Next: Track & export →</a><a class="btn secondary" href="client-comm.html" style="text-decoration:none;display:inline-block">Back: Client comms</a></div>
-      <div class="notice" style="margin-top:14px">All actions here are mocked. The goal is to validate layout, flow, and labels.</div>
-    
+          <h2>What happens on this screen</h2>
+          <p>UX + MVP behavior for this screen.</p>
+          <ul style="margin:0 0 14px 18px;color:var(--muted);line-height:1.4">
+            <li>Collect availability (candidate + client).</li>
+            <li>AI generates a plan + rubric and builds a calendar invite draft.</li>
+            <li>Backend creates Google Calendar event + Meet link and sends invites.</li>
+          </ul>
+
+          <div class="notice" style="margin-top:14px">
+            If you see “Unable to connect”, start the backend:
+            <div class="mono" style="margin-top:8px">uvicorn app:app --reload --port 8000</div>
+          </div>
         </aside>
       </div>
     </main>
   </div>
 
   <script>
-    // tiny UX sugar (mock only)
-    document.querySelectorAll('a.step').forEach(a=>a.addEventListener('click', ()=>{}));
+    const API = "http://127.0.0.1:8000";
+
+    // Default interviewer rows
+    function interviewerRow(name = "", email = "") {
+      const wrap = document.createElement("div");
+      wrap.className = "split";
+      wrap.style.marginTop = "8px";
+
+      wrap.innerHTML = `
+        <div>
+          <input class="input iv-name" placeholder="Interviewer name" value="${name.replaceAll('"', '&quot;')}"/>
+        </div>
+        <div>
+          <input class="input iv-email" placeholder="Interviewer email" value="${email.replaceAll('"', '&quot;')}"/>
+        </div>
+      `;
+
+      const remove = document.createElement("button");
+      remove.className = "btn secondary";
+      remove.type = "button";
+      remove.textContent = "Remove";
+      remove.style.marginTop = "8px";
+      remove.onclick = () => wrap.remove();
+
+      const holder = document.createElement("div");
+      holder.appendChild(wrap);
+      holder.appendChild(remove);
+      return holder;
+    }
+
+    function addInterviewer(name = "", email = "") {
+      document.querySelector("#interviewers").appendChild(interviewerRow(name, email));
+    }
+
+    function collectInterviewers() {
+      const rows = Array.from(document.querySelectorAll("#interviewers .split"));
+      const out = [];
+      for (const r of rows) {
+        const name = (r.querySelector(".iv-name")?.value || "").trim();
+        const email = (r.querySelector(".iv-email")?.value || "").trim();
+        if (email) out.push({ name, email });
+      }
+      return out;
+    }
+
+    function setStatus(msg) {
+      const n = document.querySelector("#statusNote");
+      n.style.display = "block";
+      n.textContent = msg;
+    }
+
+    function clearLinks() {
+      const openEventBtn = document.querySelector("#openEventBtn");
+      const openMeetBtn = document.querySelector("#openMeetBtn");
+      openEventBtn.style.display = "none";
+      openMeetBtn.style.display = "none";
+      openEventBtn.href = "#";
+      openMeetBtn.href = "#";
+    }
+
+    function connectGoogle() {
+      window.open(`${API}/auth/google`, "_blank");
+    }
+
+    async function checkHealth() {
+      const badge = document.querySelector("#healthBadge");
+      badge.style.display = "inline-flex";
+      badge.textContent = "checking...";
+      try {
+        const r = await fetch(`${API}/health`);
+        const j = await r.json();
+        badge.textContent = (j.ok && j.token_found) ? "Backend: online (calendar connected)" : "Backend: online (not connected)";
+      } catch (e) {
+        badge.textContent = "Backend: offline";
+      }
+    }
+
+    async function generateDraft() {
+      clearLinks();
+      setStatus("Generating draft...");
+
+      const payload = {
+        candidate_name: document.querySelector("#candidateName").value.trim(),
+        candidate_email: document.querySelector("#candidateEmail").value.trim(),
+        interviewers: collectInterviewers(), // [{name,email}]
+        role: document.querySelector("#role").value.trim(),
+        job_description: document.querySelector("#jobDescription").value,
+        talking_points: document.querySelector("#talkingPoints").value,
+        ai_context: document.querySelector("#aiContext").value,
+        duration_minutes: parseInt(document.querySelector("#duration").value, 10),
+        location: "Google Meet (auto)"
+      };
+
+      try {
+        const r = await fetch(`${API}/api/invite/draft`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const txt = await r.text();
+        if (!r.ok) {
+          document.querySelector("#draftJson").textContent = txt;
+          setStatus("Draft failed. See error in Draft JSON.");
+          return;
+        }
+
+        const draft = JSON.parse(txt);
+        window.__draft = draft;
+        document.querySelector("#draftJson").textContent = JSON.stringify(draft, null, 2);
+        setStatus("Draft created. Now click: Create Google Calendar Invite.");
+      } catch (e) {
+        document.querySelector("#draftJson").textContent = String(e);
+        setStatus("Draft failed due to connection error.");
+      }
+    }
+
+    async function createInvite() {
+      clearLinks();
+      setStatus("Creating calendar event...");
+
+      if (!window.__draft) {
+        setStatus("No draft found. Click Generate AI Draft first.");
+        return;
+      }
+
+      const tz = document.querySelector("#timezone").value;
+      const startLocal = document.querySelector("#windowStart").value;
+      const endLocal = document.querySelector("#windowEnd").value;
+
+      if (!startLocal || !endLocal) {
+        setStatus("Please set window start and end.");
+        return;
+      }
+
+      // Convert datetime-local to ISO with timezone offset by letting Date parse local
+      const startIso = new Date(startLocal).toISOString();
+      const endIso = new Date(endLocal).toISOString();
+
+      const payload = {
+        draft: window.__draft,
+        time_window_start_iso: startIso,
+        time_window_end_iso: endIso,
+        timezone: tz,
+        calendar_id: "primary"
+      };
+
+      try {
+        const r = await fetch(`${API}/api/invite/create`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const txt = await r.text();
+        document.querySelector("#result").textContent = txt;
+
+        if (!r.ok) {
+          setStatus("Create invite failed. See error in Create Invite Result.");
+          return;
+        }
+
+        const out = JSON.parse(txt);
+        setStatus("Invite created. Use the buttons to open it.");
+
+        const openEventBtn = document.querySelector("#openEventBtn");
+        const openMeetBtn = document.querySelector("#openMeetBtn");
+
+        if (out.eventLink) {
+          openEventBtn.href = out.eventLink;
+          openEventBtn.style.display = "inline-flex";
+        }
+        if (out.hangoutLink) {
+          openMeetBtn.href = out.hangoutLink;
+          openMeetBtn.style.display = "inline-flex";
+        }
+      } catch (e) {
+        document.querySelector("#result").textContent = String(e);
+        setStatus("Create invite failed due to connection error.");
+      }
+    }
+
+    // Initialize
+    (function init() {
+      // Candidate email field (was missing in your snippet)
+      const candidateEmail = document.createElement("input");
+      candidateEmail.id = "candidateEmail";
+      candidateEmail.className = "input";
+      candidateEmail.placeholder = "e.g., name@devready.io";
+      candidateEmail.value = "mackenzie.schmaltz@devready.io";
+
+      // Insert next to candidate name in DOM (simple: after candidateName input)
+      const cn = document.querySelector("#candidateName");
+      cn.insertAdjacentElement("afterend", candidateEmail);
+      candidateEmail.style.marginTop = "8px";
+
+      // Seed interviewers
+      addInterviewer("Hiring Manager", "hiring.manager@devready.io");
+
+      // Default time window = tomorrow 10:00–17:00 local
+      const now = new Date();
+      const tmr = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+      const pad = (n) => String(n).padStart(2, "0");
+      const fmtLocal = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+
+      const start = new Date(tmr); start.setHours(10, 0, 0, 0);
+      const end = new Date(tmr); end.setHours(17, 0, 0, 0);
+
+      document.querySelector("#windowStart").value = fmtLocal(start);
+      document.querySelector("#windowEnd").value = fmtLocal(end);
+
+      checkHealth();
+    })();
   </script>
 </body>
+
 </html>
