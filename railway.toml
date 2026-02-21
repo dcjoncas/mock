@@ -1,0 +1,12 @@
+cd C:\mock
+@"
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "uvicorn app:app --host 0.0.0.0 --port $PORT"
+"@ | Out-File -Encoding utf8 railway.toml
+
+git add railway.toml
+git commit -m "Add railway.toml to force Nixpacks + start command"
+git push origin main
